@@ -194,6 +194,8 @@ def initialize_network():
 		#	for receiver in range(1, 51):
 		#		r.add(sender, receiver, float(neignbour_strength), channel_1)
 
+		print "hello2"
+
 		for i in range(1, len(lines)-1):
 		    nodes_pre = lines[i].split()
 		    nodes_post = lines[i+1].split()
@@ -209,8 +211,8 @@ def initialize_network():
 		            else:
 		                r.add(int(node1), int(node2), float(neignbour_strength), channel)
 		                r.add(int(node2), int(node1), float(neignbour_strength), channel)		            	
-		                print "( "+str(node1)+", "+str(node2)+" )"+" rssi_level: "+str(float(neignbour_strength))
-		                print "( "+str(node2)+", "+str(node1)+" )"+" rssi_level: "+str(float(neignbour_strength))
+		                #print "( "+str(node1)+", "+str(node2)+" )"+" rssi_level: "+str(float(neignbour_strength))
+		                #print "( "+str(node2)+", "+str(node1)+" )"+" rssi_level: "+str(float(neignbour_strength))
 
 		for node in lines[len(lines)-1].split():
 			r.add(int(node), 0, float(sync_rssi_strength), channel)
@@ -232,9 +234,11 @@ def initialize_network():
 			r.add(sensor, 0, float(sync_rssi_strength), channel_1)
 			r.add(0, sensor, float(sync_rssi_strength), channel_1)
 
-	
+	print "hello1"
 	for node in range(0, 51):
-		m = t.getNode(node);
+		#print "hello3"
+		m = t.getNode(node)
+		#print m
 		for channel in [22, 23, 24, 25, 26]:
 			if channel==22:
 				noise = open("noise_chan22_110.txt", "r")
@@ -260,6 +264,7 @@ def initialize_network():
 		m.turnOn()
 		m.bootAtTime(0)
 		#print "Booting ", node, " at time ", str(0)
+
 	return len(topo)
 	#
 
@@ -356,7 +361,7 @@ def get_new_topo():
 '''
 initialize_network()
 totalnode = 47
-#print "totalnode: ", totalnode
+print "totalnode: ", totalnode
 CONNECTIVITY = 4
 SAMPLE = 50
 THRESHOLD = 0.7

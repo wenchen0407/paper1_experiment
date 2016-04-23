@@ -131,7 +131,7 @@ typedef long __darwin_time_t;
 # 58 "/usr/include/sys/_types.h" 3
 struct __darwin_pthread_handler_rec {
 
-  void (*__routine)(void *arg_0x10981a738);
+  void (*__routine)(void *arg_0x110135738);
   void *__arg;
   struct __darwin_pthread_handler_rec *__next;
 };
@@ -410,26 +410,26 @@ typedef struct { unsigned char nxdata[2]; } __attribute__((packed)) nxle_uint16_
 typedef struct { unsigned char nxdata[4]; } __attribute__((packed)) nxle_uint32_t;typedef uint32_t __nesc_nxbase_nxle_uint32_t  ;
 typedef struct { unsigned char nxdata[8]; } __attribute__((packed)) nxle_uint64_t;typedef uint64_t __nesc_nxbase_nxle_uint64_t  ;
 # 81 "/usr/include/string.h" 3
-int memcmp(const void *arg_0x1099c1970, const void *arg_0x1099c1c48, size_t arg_0x1099bf020);
+int memcmp(const void *arg_0x1102dc970, const void *arg_0x1102dcc48, size_t arg_0x1102da020);
 
 
 
 
 
-int strcmp(const char *arg_0x1099caaf8, const char *arg_0x1099cadd0);
+int strcmp(const char *arg_0x1102e5af8, const char *arg_0x1102e5dd0);
 
 
 
 
-size_t strlen(const char *arg_0x1099cc628);
+size_t strlen(const char *arg_0x1102e7628);
 
 
 
 
-char *strrchr(const char *arg_0x1099d65e0, int arg_0x1099d6848);
+char *strrchr(const char *arg_0x1102f15e0, int arg_0x1102f1848);
 
 
-char *strtok(char *arg_0x1099d3858, const char *arg_0x1099d3b30);
+char *strtok(char *arg_0x1102ee858, const char *arg_0x1102eeb30);
 #line 155
 typedef __darwin_ssize_t ssize_t;
 # 58 "/usr/include/secure/_string.h" 3
@@ -905,7 +905,7 @@ struct sigevent {
   int sigev_notify;
   int sigev_signo;
   union sigval sigev_value;
-  void (*sigev_notify_function)(union sigval arg_0x109a758d0);
+  void (*sigev_notify_function)(union sigval arg_0x1103908d0);
   pthread_attr_t *sigev_notify_attributes;
 };
 #line 205
@@ -924,15 +924,15 @@ typedef struct __siginfo {
 } siginfo_t;
 #line 286
 union __sigaction_u {
-  void (*__sa_handler)(int arg_0x109a7c9f8);
-  void (*__sa_sigaction)(int arg_0x109a7b0c8, struct __siginfo *arg_0x109a7b428, 
-  void *arg_0x109a7b6e8);
+  void (*__sa_handler)(int arg_0x1103979f8);
+  void (*__sa_sigaction)(int arg_0x1103960c8, struct __siginfo *arg_0x110396428, 
+  void *arg_0x1103966e8);
 };
 
 
 struct __sigaction {
   union __sigaction_u __sigaction_u;
-  void (*sa_tramp)(void *arg_0x109a7a5e0, int arg_0x109a7a848, int arg_0x109a7aab0, siginfo_t *arg_0x109a7adb0, void *arg_0x109a840c8);
+  void (*sa_tramp)(void *arg_0x1103955e0, int arg_0x110395848, int arg_0x110395ab0, siginfo_t *arg_0x110395db0, void *arg_0x11039f0c8);
   sigset_t sa_mask;
   int sa_flags;
 };
@@ -946,10 +946,10 @@ struct sigaction {
   int sa_flags;
 };
 #line 348
-typedef void (*sig_t)(int arg_0x109a83b40);
+typedef void (*sig_t)(int arg_0x11039eb40);
 #line 365
 struct sigvec {
-  void (*sv_handler)(int arg_0x109a82608);
+  void (*sv_handler)(int arg_0x11039d608);
   int sv_mask;
   int sv_flags;
 };
@@ -1070,7 +1070,7 @@ typedef struct __nesc_unnamed4249 {
   long long rem;
 } lldiv_t;
 #line 149
-int atoi(const char *arg_0x109ab5878);
+int atoi(const char *arg_0x1103d0878);
 
 
 
@@ -1080,8 +1080,8 @@ int atoi(const char *arg_0x109ab5878);
 
 
 
-void exit(int arg_0x109aba370) __attribute((noreturn)) ;
-void free(void *arg_0x109abac28);
+void exit(int arg_0x1103d5370) __attribute((noreturn)) ;
+void free(void *arg_0x1103d5c28);
 
 
 
@@ -1090,7 +1090,7 @@ void free(void *arg_0x109abac28);
 
 
 
-void *malloc(size_t arg_0x109ac15a8);
+void *malloc(size_t arg_0x1103dc5a8);
 # 80 "/usr/include/i386/types.h" 3
 typedef unsigned char u_int8_t;
 
@@ -1138,15 +1138,15 @@ typedef __darwin_mode_t mode_t;
 typedef float float_t;
 typedef double double_t;
 #line 395
-extern double log(double arg_0x109b84408);
+extern double log(double arg_0x11049f408);
 #line 439
-extern double fabs(double arg_0x109b99020);
+extern double fabs(double arg_0x1104b4020);
 #line 451
-extern double pow(double arg_0x109ba2580, double arg_0x109ba27e8);
+extern double pow(double arg_0x1104bd580, double arg_0x1104bd7e8);
 
 
 
-extern double sqrt(double arg_0x109ba0370);
+extern double sqrt(double arg_0x1104bb370);
 
 
 
@@ -1154,9 +1154,9 @@ extern double sqrt(double arg_0x109ba0370);
 
 
 
-extern double erfc(double arg_0x109bac590);
+extern double erfc(double arg_0x1104c7590);
 #line 482
-extern double floor(double arg_0x109bb4968);
+extern double floor(double arg_0x1104cf968);
 #line 652
 struct exception {
   int type;
@@ -1199,8 +1199,8 @@ typedef struct __nesc_unnamed4253 {
   char __magic[8];
   char __encoding[32];
 
-  __darwin_rune_t (*__sgetrune)(const char *arg_0x109bfbd10, __darwin_size_t arg_0x109bfa060, char const **arg_0x109bfa370);
-  int (*__sputrune)(__darwin_rune_t arg_0x109bfaa68, char *arg_0x109bfad08, __darwin_size_t arg_0x109bf9060, char **arg_0x109bf9338);
+  __darwin_rune_t (*__sgetrune)(const char *arg_0x110516d10, __darwin_size_t arg_0x110515060, char const **arg_0x110515370);
+  int (*__sputrune)(__darwin_rune_t arg_0x110515a68, char *arg_0x110515d08, __darwin_size_t arg_0x110514060, char **arg_0x110514338);
   __darwin_rune_t __invalid_rune;
 
   __uint32_t __runetype[1 << 8];
@@ -1259,10 +1259,10 @@ typedef struct __sFILE {
 
 
   void *_cookie;
-  int (*_close)(void *arg_0x109c380c8);
-  int (*_read)(void *arg_0x109c38730, char *arg_0x109c389d0, int arg_0x109c38c38);
-  fpos_t (*_seek)(void *arg_0x109c36338, fpos_t arg_0x109c365e0, int arg_0x109c36848);
-  int (*_write)(void *arg_0x109c35020, const char *arg_0x109c352f8, int arg_0x109c35560);
+  int (*_close)(void *arg_0x1105530c8);
+  int (*_read)(void *arg_0x110553730, char *arg_0x1105539d0, int arg_0x110553c38);
+  fpos_t (*_seek)(void *arg_0x110551338, fpos_t arg_0x1105515e0, int arg_0x110551848);
+  int (*_write)(void *arg_0x110550020, const char *arg_0x1105502f8, int arg_0x110550560);
 
 
   struct __sbuf _ub;
@@ -1281,31 +1281,31 @@ typedef struct __sFILE {
   fpos_t _offset;
 } FILE;
 #line 240
-int fclose(FILE *arg_0x109c416b8);
+int fclose(FILE *arg_0x11055c6b8);
 
 
-int fflush(FILE *arg_0x109c3e0c8);
-
-
-
+int fflush(FILE *arg_0x1105590c8);
 
 
 
-FILE *fopen(const char *arg_0x109c4da20, const char *arg_0x109c4dcf8) __asm ("_""fopen");
 
-int fprintf(FILE *arg_0x109c4cad8, const char *arg_0x109c4cdb0, ...) __attribute((__format__(__printf__, 2, 3))) ;
+
+
+FILE *fopen(const char *arg_0x110568a20, const char *arg_0x110568cf8) __asm ("_""fopen");
+
+int fprintf(FILE *arg_0x110567ad8, const char *arg_0x110567db0, ...) __attribute((__format__(__printf__, 2, 3))) ;
 #line 267
-int printf(const char *arg_0x109c5f338, ...) __attribute((__format__(__printf__, 1, 2))) ;
+int printf(const char *arg_0x11057a338, ...) __attribute((__format__(__printf__, 1, 2))) ;
 #line 282
-int vfprintf(FILE *arg_0x109c64910, const char *arg_0x109c64be8, va_list arg_0x109c62020) __attribute((__format__(__printf__, 2, 0))) ;
+int vfprintf(FILE *arg_0x11057f910, const char *arg_0x11057fbe8, va_list arg_0x11057d020) __attribute((__format__(__printf__, 2, 0))) ;
 #line 306
-FILE *fdopen(int arg_0x109c76840, const char *arg_0x109c76b18) __asm ("_""fdopen");
+FILE *fdopen(int arg_0x110591840, const char *arg_0x110591b18) __asm ("_""fdopen");
 
-int fileno(FILE *arg_0x109c75930);
+int fileno(FILE *arg_0x110590930);
 #line 414
 typedef __darwin_off_t off_t;
 #line 449
-ssize_t getline(char **arg_0x109c8f3c0, size_t *arg_0x109c8f6a0, FILE *arg_0x109c8f970) __attribute((visibility("default"))) ;
+ssize_t getline(char **arg_0x1105aa3c0, size_t *arg_0x1105aa6a0, FILE *arg_0x1105aa970) __attribute((visibility("default"))) ;
 # 57 "/opt/tinyos-2.x/tos/lib/tossim/tos.h"
 typedef uint8_t bool;
 
@@ -1423,8 +1423,8 @@ typedef struct hashtable hashtable_t;
 #line 78
 struct hashtable *
 create_hashtable(unsigned int minsize, 
-unsigned int (*hashfunction)(void *arg_0x109ce5760), 
-int (*key_eq_fn)(void *arg_0x109ce4020, void *arg_0x109ce42c0));
+unsigned int (*hashfunction)(void *arg_0x110600760), 
+int (*key_eq_fn)(void *arg_0x1105ff020, void *arg_0x1105ff2c0));
 #line 103
 #line 102
 int 
@@ -1690,7 +1690,7 @@ struct tm;
 struct tm;
 struct tm;
 # 211 "/usr/include/sys/time.h" 3
-int gettimeofday(struct timeval *arg_0x109df2ca8, void *arg_0x109df1020);
+int gettimeofday(struct timeval *arg_0x11070dca8, void *arg_0x11070c020);
 # 43 "/opt/tinyos-2.x/tos/lib/tossim/sim_noise.h"
 enum __nesc_unnamed4257 {
   NOISE_MIN = -115, 
@@ -2013,7 +2013,7 @@ static inline void RandomInitialise(int ij, int kl);
 #line 103
 static double RandomUniform(void );
 # 46 "/opt/tinyos-2.x/tos/lib/tossim/randomlib.h"
-static inline void RandomInitialise(int arg_0x109f06770, int arg_0x109f069d8);
+static inline void RandomInitialise(int arg_0x110821770, int arg_0x1108219d8);
 static double RandomUniform(void );
 # 50 "/opt/tinyos-2.x/tos/lib/tossim/sim_noise.c"
 int numCase1 = 0;
@@ -3851,11 +3851,11 @@ static error_t MeasureClockC__Init__init(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static error_t SimSchedulerBasicP__TaskBasic__postTask(
 # 41 "/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x10a04b960);
+uint8_t arg_0x110966960);
 # 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP__TaskBasic__default__runTask(
 # 41 "/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x10a04b960);
+uint8_t arg_0x110966960);
 # 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
 static void SimSchedulerBasicP__Scheduler__init(void );
 
@@ -3907,7 +3907,7 @@ message_t *
 
 AsyncReceiveAdapterP__Receive__default__receive(
 # 31 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/AsyncReceiveAdapterP.nc"
-am_id_t arg_0x10a43d020, 
+am_id_t arg_0x110d58020, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3928,7 +3928,7 @@ uint8_t len);
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t AsyncSendAdapterP__AMSend__send(
 # 31 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/AsyncSendAdapterP.nc"
-am_id_t arg_0x10a43ec00, 
+am_id_t arg_0x110d59c00, 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 60
@@ -3949,7 +3949,7 @@ void *
 
 AsyncSendAdapterP__AMSend__getPayload(
 # 31 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/AsyncSendAdapterP.nc"
-am_id_t arg_0x10a43ec00, 
+am_id_t arg_0x110d59c00, 
 # 121 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4169,7 +4169,7 @@ error_t error);
 #line 40
 static error_t SenderDispatcherP__Send__send(
 # 39 "/opt/tinyos-2.x/apps/wustl/upma/system/SenderDispatcherP.nc"
-uint8_t arg_0x10a7d76d8, 
+uint8_t arg_0x1110f06d8, 
 # 34 "/opt/tinyos-2.x/apps/wustl/upma/interfaces/AsyncSend.nc"
 message_t * msg, 
 
@@ -4185,7 +4185,7 @@ void *
 
 SenderDispatcherP__Send__getPayload(
 # 39 "/opt/tinyos-2.x/apps/wustl/upma/system/SenderDispatcherP.nc"
-uint8_t arg_0x10a7d76d8, 
+uint8_t arg_0x1110f06d8, 
 # 68 "/opt/tinyos-2.x/apps/wustl/upma/interfaces/AsyncSend.nc"
 message_t * msg, 
 
@@ -4194,7 +4194,7 @@ uint8_t len);
 #line 48
 static void SenderDispatcherP__Send__default__sendDone(
 # 39 "/opt/tinyos-2.x/apps/wustl/upma/system/SenderDispatcherP.nc"
-uint8_t arg_0x10a7d76d8, 
+uint8_t arg_0x1110f06d8, 
 # 44 "/opt/tinyos-2.x/apps/wustl/upma/interfaces/AsyncSend.nc"
 message_t * msg, 
 
@@ -4317,7 +4317,7 @@ message_t *
 
 SyncReceiveAdapterP__Receive__receive(
 # 3 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/SyncReceiveAdapterP.nc"
-am_id_t arg_0x10aba01a0, 
+am_id_t arg_0x1114b91a0, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4338,7 +4338,7 @@ static void SyncSendAdapterP__SplitControl__stopDone(error_t error);
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void SyncSendAdapterP__AMSend__sendDone(
 # 3 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/SyncSendAdapterP.nc"
-am_id_t arg_0x10ab956c0, 
+am_id_t arg_0x1114af6c0, 
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4374,7 +4374,7 @@ uint8_t len);
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t TossimActiveMessageC__AMSend__send(
 # 39 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abcbaf0, 
+am_id_t arg_0x1114e4af0, 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 60
@@ -4395,7 +4395,7 @@ void *
 
 TossimActiveMessageC__AMSend__getPayload(
 # 39 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abcbaf0, 
+am_id_t arg_0x1114e4af0, 
 # 121 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4410,7 +4410,7 @@ message_t *
 
 TossimActiveMessageC__Snoop__default__receive(
 # 41 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abc67c0, 
+am_id_t arg_0x1114df7c0, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4527,7 +4527,7 @@ error_t error);
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(
 # 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x10ac63488, 
+am_id_t arg_0x11157c488, 
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4544,7 +4544,7 @@ void *
 
 /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__getPayload(
 # 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x10ac64318, 
+uint8_t arg_0x11157e318, 
 # 111 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4553,7 +4553,7 @@ uint8_t len);
 #line 89
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(
 # 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x10ac64318, 
+uint8_t arg_0x11157e318, 
 # 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4753,7 +4753,7 @@ int sim_main_start_mote(void )   ;
 # 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP__TaskBasic__runTask(
 # 41 "/opt/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x10a04b960);
+uint8_t arg_0x110966960);
 
 
 
@@ -4969,7 +4969,7 @@ message_t *
 
 AsyncReceiveAdapterP__Receive__receive(
 # 31 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/AsyncReceiveAdapterP.nc"
-am_id_t arg_0x10a43d020, 
+am_id_t arg_0x110d58020, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5010,7 +5010,7 @@ static inline message_t *AsyncReceiveAdapterP__Receive__default__receive(am_id_t
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void AsyncSendAdapterP__AMSend__sendDone(
 # 31 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/AsyncSendAdapterP.nc"
-am_id_t arg_0x10a43ec00, 
+am_id_t arg_0x110d59c00, 
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -5288,11 +5288,11 @@ static void PureTDMASchedulerP__generateSchedule(void );
 static int PureTDMASchedulerP__find_delay(int node);
 
 static inline error_t PureTDMASchedulerP__Init__init(void );
-#line 269
+#line 264
 static error_t PureTDMASchedulerP__SplitControl__start(void );
-#line 288
+#line 283
 static inline void PureTDMASchedulerP__RadioPowerControl__startDone(error_t error);
-#line 305
+#line 300
 static inline void PureTDMASchedulerP__RadioPowerControl__stopDone(error_t error);
 
 
@@ -5305,7 +5305,7 @@ static inline void PureTDMASchedulerP__RadioPowerControl__stopDone(error_t error
 
 
 static inline void PureTDMASchedulerP__Slotter__slot(uint32_t slot);
-#line 489
+#line 484
 static inline error_t PureTDMASchedulerP__Send__send(message_t *msg, uint8_t len);
 
 
@@ -5318,9 +5318,9 @@ static inline error_t PureTDMASchedulerP__Send__send(message_t *msg, uint8_t len
 
 
 static inline void PureTDMASchedulerP__SubSend__sendDone(message_t *msg, error_t error);
-#line 531
+#line 526
 static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void *payload, uint8_t len);
-#line 816
+#line 811
 static inline void *PureTDMASchedulerP__Send__getPayload(message_t *msg, uint8_t len);
 
 
@@ -5331,16 +5331,16 @@ static inline void *PureTDMASchedulerP__Send__getPayload(message_t *msg, uint8_t
 
 
 static inline void PureTDMASchedulerP__Receive__updateBuffer(message_t *msg);
-#line 839
+#line 834
 static inline void PureTDMASchedulerP__CC2420Config__syncDone(error_t error);
 static inline void PureTDMASchedulerP__BeaconSend__sendDone(message_t *msg, error_t error);
 
 static void PureTDMASchedulerP__readTopoFile(void );
-#line 918
+#line 913
 static int PureTDMASchedulerP__find_delay(int node);
-#line 931
+#line 926
 static inline void PureTDMASchedulerP__reset_parameters(void );
-#line 1048
+#line 1043
 static void PureTDMASchedulerP__generateSchedule(void );
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 static void LedsP__Led0__makeOutput(void );
@@ -5781,7 +5781,7 @@ uint8_t len);
 #line 48
 static void SenderDispatcherP__Send__sendDone(
 # 39 "/opt/tinyos-2.x/apps/wustl/upma/system/SenderDispatcherP.nc"
-uint8_t arg_0x10a7d76d8, 
+uint8_t arg_0x1110f06d8, 
 # 44 "/opt/tinyos-2.x/apps/wustl/upma/interfaces/AsyncSend.nc"
 message_t * msg, 
 
@@ -6327,7 +6327,7 @@ static error_t SyncSendAdapterP__SplitControl__start(void );
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t SyncSendAdapterP__AMSend__send(
 # 3 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/SyncSendAdapterP.nc"
-am_id_t arg_0x10ab956c0, 
+am_id_t arg_0x1114af6c0, 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 60
@@ -6348,7 +6348,7 @@ void *
 
 SyncSendAdapterP__AMSend__getPayload(
 # 3 "/Users/wangwenchen/wcps_apps/pure-tdma/sim/SyncSendAdapterP.nc"
-am_id_t arg_0x10ab956c0, 
+am_id_t arg_0x1114af6c0, 
 # 121 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -6410,7 +6410,7 @@ static am_addr_t TossimActiveMessageC__amAddress(void );
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void TossimActiveMessageC__AMSend__sendDone(
 # 39 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abcbaf0, 
+am_id_t arg_0x1114e4af0, 
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -6429,7 +6429,7 @@ message_t *
 
 TossimActiveMessageC__Snoop__receive(
 # 41 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abc67c0, 
+am_id_t arg_0x1114df7c0, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6448,7 +6448,7 @@ message_t *
 
 TossimActiveMessageC__Receive__receive(
 # 40 "/opt/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x10abc7c18, 
+am_id_t arg_0x1114e0c18, 
 # 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6607,7 +6607,7 @@ static inline void */*TestNetworkAppC.Sender.AMQueueEntryP*/AMQueueEntryP__0__AM
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(
 # 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x10ac63488, 
+am_id_t arg_0x11157c488, 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 60
@@ -6628,7 +6628,7 @@ void *
 
 /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(
 # 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x10ac63488, 
+am_id_t arg_0x11157c488, 
 # 121 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -6637,7 +6637,7 @@ uint8_t len);
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(
 # 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x10ac64318, 
+uint8_t arg_0x11157e318, 
 # 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -7308,9 +7308,9 @@ inline static void * PureTDMASchedulerP__SubSend__getPayload(message_t * msg, ui
 #line 71
 }
 #line 71
-# 816 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 811 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void *PureTDMASchedulerP__Send__getPayload(message_t *msg, uint8_t len)
-#line 816
+#line 811
 {
   return PureTDMASchedulerP__SubSend__getPayload(msg, len);
 }
@@ -7330,9 +7330,9 @@ inline static am_addr_t PureTDMASchedulerP__AMPacket__source(message_t * amsg){
 #line 77
 }
 #line 77
-# 531 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 526 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void *payload, uint8_t len)
-#line 531
+#line 526
 {
   unsigned char *__nesc_temp52;
   unsigned char __nesc_temp51;
@@ -7343,10 +7343,10 @@ static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void 
   unsigned char __nesc_temp46;
   unsigned char *__nesc_temp45;
   unsigned char *__nesc_temp44;
-#line 532
+#line 527
   am_addr_t src = PureTDMASchedulerP__AMPacket__source(msg);
 
-#line 533
+#line 528
   PureTDMASchedulerP__rcmr[sim_node()] = (TestNetworkMsg *)payload;
   PureTDMASchedulerP__log_payload[sim_node()] = (TestNetworkMsg *)PureTDMASchedulerP__Send__getPayload(& PureTDMASchedulerP__m_entry[sim_node()].msg, sizeof(TestNetworkMsg ));
 
@@ -7492,7 +7492,7 @@ static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void 
 
 
       if (
-#line 676
+#line 671
       TOS_NODE_ID != 1 && TOS_NODE_ID != 2 && TOS_NODE_ID != 3 && TOS_NODE_ID != 4 && TOS_NODE_ID != 5
        && TOS_NODE_ID != 6 && TOS_NODE_ID != 7 && TOS_NODE_ID != 8 && TOS_NODE_ID != 9) {
           __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->self_data1.nxdata, 0);
@@ -7521,7 +7521,7 @@ static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void 
                           __nesc_hton_uint8(PureTDMASchedulerP__m_entry[sim_node()].handled_saved_data[PureTDMASchedulerP__i[sim_node()]].nxdata, 1);
                         }
                       else {
-#line 702
+#line 697
                         if (__nesc_ntoh_uint8(PureTDMASchedulerP__rcmr[sim_node()]->childrenHandle[PureTDMASchedulerP__i[sim_node()]].nxdata) == 0 && __nesc_ntoh_uint8(PureTDMASchedulerP__rcmr[sim_node()]->childrenReceive[PureTDMASchedulerP__i[sim_node()]].nxdata) == 0 && PureTDMASchedulerP__self_pos[sim_node()] - (PureTDMASchedulerP__isSibling[sim_node()] - 1) == 1) {
                             __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->childrenHandle[PureTDMASchedulerP__i[sim_node()]].nxdata, 1);
 
@@ -7542,7 +7542,7 @@ static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void 
                                       }
                                   }
                               }
-#line 733
+#line 728
                             if (__nesc_ntoh_uint8(PureTDMASchedulerP__m_entry[sim_node()].saved_data[PureTDMASchedulerP__i[sim_node()]].curr_num.nxdata) > 0) {
 
                                 for (PureTDMASchedulerP__j[sim_node()] = 0; PureTDMASchedulerP__j[sim_node()] < __nesc_ntoh_uint8(PureTDMASchedulerP__m_entry[sim_node()].saved_data[PureTDMASchedulerP__i[sim_node()]].curr_num.nxdata); PureTDMASchedulerP__j[sim_node()]++) {
@@ -7564,7 +7564,7 @@ static inline void PureTDMASchedulerP__SubReceive__receive(message_t *msg, void 
                     }
                 }
               else {
-#line 774
+#line 769
                 if (__nesc_ntoh_uint8(PureTDMASchedulerP__log_payload[sim_node()]->childrenReceive[PureTDMASchedulerP__i[sim_node()]].nxdata) == 0) {
                     if (PureTDMASchedulerP__isSibling[sim_node()] - 1 < PureTDMASchedulerP__self_pos[sim_node()] && __nesc_ntoh_uint8(PureTDMASchedulerP__rcmr[sim_node()]->childrenHandle[PureTDMASchedulerP__i[sim_node()]].nxdata) == 1) {
                         __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->childrenHandle[PureTDMASchedulerP__i[sim_node()]].nxdata, 1);
@@ -7785,13 +7785,13 @@ static inline message_t *SyncReceiveAdapterP__Receive__receive(am_id_t id, messa
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC__Receive__receive(am_id_t arg_0x10abc7c18, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC__Receive__receive(am_id_t arg_0x1114e0c18, message_t * msg, void * payload, uint8_t len){
 #line 67
   nx_struct message_t *__nesc_result;
 #line 67
 
 #line 67
-  __nesc_result = SyncReceiveAdapterP__Receive__receive(arg_0x10abc7c18, msg, payload, len);
+  __nesc_result = SyncReceiveAdapterP__Receive__receive(arg_0x1114e0c18, msg, payload, len);
 #line 67
 
 #line 67
@@ -8021,9 +8021,9 @@ static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
   return value;
 }
 
-# 931 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 926 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__reset_parameters(void )
-#line 931
+#line 926
 {
   PureTDMASchedulerP__slotSize[sim_node()] = 10 * 32;
 
@@ -8088,7 +8088,7 @@ static inline void PureTDMASchedulerP__reset_parameters(void )
                     }
                 }
               else 
-#line 993
+#line 988
                 {
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->totalChildren.nxdata, 0);
                 }
@@ -8125,7 +8125,7 @@ static inline void PureTDMASchedulerP__reset_parameters(void )
 
 
               if ((((((((
-#line 1027
+#line 1022
               TOS_NODE_ID == 1 || TOS_NODE_ID == 2) || TOS_NODE_ID == 3) || TOS_NODE_ID == 4) || TOS_NODE_ID == 5)
                || TOS_NODE_ID == 6) || TOS_NODE_ID == 7) || TOS_NODE_ID == 8) || TOS_NODE_ID == 9) {
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->self_data1.nxdata, TOS_NODE_ID * 10);
@@ -8137,7 +8137,7 @@ static inline void PureTDMASchedulerP__reset_parameters(void )
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->i_am_primary.nxdata, 1);
                 }
               else 
-#line 1036
+#line 1031
                 {
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->i_am_primary.nxdata, 0);
                 }
@@ -8161,13 +8161,13 @@ inline static error_t PureTDMASchedulerP__BeaconSend__send(message_t * msg, uint
 #line 40
 }
 #line 40
-# 316 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 311 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__Slotter__slot(uint32_t slot)
-#line 316
+#line 311
 {
   unsigned char __nesc_temp43;
   unsigned char *__nesc_temp42;
-#line 318
+#line 313
   message_t *tmpToSend;
   uint8_t tmpToSendLen;
   uint8_t i;
@@ -8193,7 +8193,7 @@ static inline void PureTDMASchedulerP__Slotter__slot(uint32_t slot)
   if (slot < PureTDMASchedulerP__cap[sim_node()]) {
     }
   else 
-#line 341
+#line 336
     {
 
 
@@ -8202,7 +8202,7 @@ static inline void PureTDMASchedulerP__Slotter__slot(uint32_t slot)
           if (PureTDMASchedulerP__coordinatorId[sim_node()] == TOS_NODE_ID) {
               PureTDMASchedulerP__BeaconSend__send((void *)0, 0);
             }
-#line 348
+#line 343
           ;
 
           PureTDMASchedulerP__flag[sim_node()] = 1;
@@ -8242,9 +8242,9 @@ static inline void PureTDMASchedulerP__Slotter__slot(uint32_t slot)
 
 
               if (TOS_NODE_ID <= PureTDMASchedulerP__ROOT1 && TOS_NODE_ID != 1 && TOS_NODE_ID != 2 && TOS_NODE_ID != 3 && TOS_NODE_ID != 4 && TOS_NODE_ID != 5 && TOS_NODE_ID != 6) {
-
+                  printf("node %d total children: %d\n", TOS_NODE_ID, __nesc_ntoh_uint8(PureTDMASchedulerP__log_payload[sim_node()]->totalChildren.nxdata));
                   for (i = 0; i < __nesc_ntoh_uint8(PureTDMASchedulerP__log_payload[sim_node()]->totalChildren.nxdata); i++) {
-
+                      printf("node %d payload children receive: %d\n", TOS_NODE_ID, __nesc_ntoh_uint8(PureTDMASchedulerP__log_payload[sim_node()]->childrenReceive[i].nxdata));
                       if (__nesc_ntoh_uint8(PureTDMASchedulerP__log_payload[sim_node()]->childrenReceive[i].nxdata) == 0 && __nesc_ntoh_uint8(PureTDMASchedulerP__m_entry[sim_node()].prob_bit[i].nxdata) > 0) {
                           (__nesc_temp42 = PureTDMASchedulerP__m_entry[sim_node()].prob_bit[i].nxdata, __nesc_hton_uint8(__nesc_temp42, (__nesc_temp43 = __nesc_ntoh_uint8(__nesc_temp42)) - 1), __nesc_temp43);
                         }
@@ -8337,13 +8337,13 @@ static inline tossim_header_t *SyncSendAdapterP__getHeader(message_t *msg)
 }
 
 # 124 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static void * SyncSendAdapterP__AMSend__getPayload(am_id_t arg_0x10ab956c0, message_t * msg, uint8_t len){
+inline static void * SyncSendAdapterP__AMSend__getPayload(am_id_t arg_0x1114af6c0, message_t * msg, uint8_t len){
 #line 124
   void *__nesc_result;
 #line 124
 
 #line 124
-  __nesc_result = TossimActiveMessageC__AMSend__getPayload(arg_0x10ab956c0, msg, len);
+  __nesc_result = TossimActiveMessageC__AMSend__getPayload(arg_0x1114af6c0, msg, len);
 #line 124
 
 #line 124
@@ -8618,9 +8618,9 @@ static inline void SyncSendAdapterP__AMSend__sendDone(am_id_t id, message_t *msg
 }
 
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static void TossimActiveMessageC__AMSend__sendDone(am_id_t arg_0x10abcbaf0, message_t * msg, error_t error){
+inline static void TossimActiveMessageC__AMSend__sendDone(am_id_t arg_0x1114e4af0, message_t * msg, error_t error){
 #line 99
-  SyncSendAdapterP__AMSend__sendDone(arg_0x10abcbaf0, msg, error);
+  SyncSendAdapterP__AMSend__sendDone(arg_0x1114e4af0, msg, error);
 #line 99
 }
 #line 99
@@ -8828,13 +8828,13 @@ uint8_t len)
 }
 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static error_t SyncSendAdapterP__AMSend__send(am_id_t arg_0x10ab956c0, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t SyncSendAdapterP__AMSend__send(am_id_t arg_0x1114af6c0, am_addr_t addr, message_t * msg, uint8_t len){
 #line 69
   unsigned char __nesc_result;
 #line 69
 
 #line 69
-  __nesc_result = TossimActiveMessageC__AMSend__send(arg_0x10ab956c0, addr, msg, len);
+  __nesc_result = TossimActiveMessageC__AMSend__send(arg_0x1114af6c0, addr, msg, len);
 #line 69
 
 #line 69
@@ -8863,9 +8863,9 @@ inline static error_t SenderDispatcherP__SubSend__send(message_t * msg, uint8_t 
 #line 40
 }
 #line 40
-# 840 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 835 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__BeaconSend__sendDone(message_t *msg, error_t error)
-#line 840
+#line 835
 {
 }
 
@@ -8960,14 +8960,14 @@ inline static bool PureTDMASchedulerP__PacketAcknowledgements__wasAcked(message_
 #line 74
 }
 #line 74
-# 500 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 495 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__SubSend__sendDone(message_t *msg, error_t error)
-#line 500
+#line 495
 {
   uint32_t slot_at_send_done;
   uint8_t ack_at_send_done;
 
-#line 503
+#line 498
   slot_at_send_done = PureTDMASchedulerP__SlotterControl__getSlot() % PureTDMASchedulerP__superframe_length[sim_node()];
   ack_at_send_done = PureTDMASchedulerP__PacketAcknowledgements__wasAcked(msg) ? 1 : 0;
 
@@ -8981,7 +8981,7 @@ static inline void PureTDMASchedulerP__SubSend__sendDone(message_t *msg, error_t
           PureTDMASchedulerP__Send__sendDone(msg, error);
         }
       else 
-#line 514
+#line 509
         {
         }
     }
@@ -9020,9 +9020,9 @@ static inline void SenderDispatcherP__Send__default__sendDone(uint8_t type, mess
 }
 
 # 48 "/opt/tinyos-2.x/apps/wustl/upma/interfaces/AsyncSend.nc"
-inline static void SenderDispatcherP__Send__sendDone(uint8_t arg_0x10a7d76d8, message_t * msg, error_t error){
+inline static void SenderDispatcherP__Send__sendDone(uint8_t arg_0x1110f06d8, message_t * msg, error_t error){
 #line 48
-  switch (arg_0x10a7d76d8) {
+  switch (arg_0x1110f06d8) {
 #line 48
     case TDMA_SLOT:
 #line 48
@@ -9038,7 +9038,7 @@ inline static void SenderDispatcherP__Send__sendDone(uint8_t arg_0x10a7d76d8, me
 #line 48
     default:
 #line 48
-      SenderDispatcherP__Send__default__sendDone(arg_0x10a7d76d8, msg, error);
+      SenderDispatcherP__Send__default__sendDone(arg_0x1110f06d8, msg, error);
 #line 48
       break;
 #line 48
@@ -9947,13 +9947,13 @@ static inline message_t *TossimActiveMessageC__Snoop__default__receive(am_id_t i
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC__Snoop__receive(am_id_t arg_0x10abc67c0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC__Snoop__receive(am_id_t arg_0x1114df7c0, message_t * msg, void * payload, uint8_t len){
 #line 67
   nx_struct message_t *__nesc_result;
 #line 67
 
 #line 67
-    __nesc_result = TossimActiveMessageC__Snoop__default__receive(arg_0x10abc67c0, msg, payload, len);
+    __nesc_result = TossimActiveMessageC__Snoop__default__receive(arg_0x1114df7c0, msg, payload, len);
 #line 67
 
 #line 67
@@ -10149,13 +10149,13 @@ static inline void *AsyncSendAdapterP__AMSend__getPayload(am_id_t id, message_t 
 }
 
 # 124 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static void * /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(am_id_t arg_0x10ac63488, message_t * msg, uint8_t len){
+inline static void * /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(am_id_t arg_0x11157c488, message_t * msg, uint8_t len){
 #line 124
   void *__nesc_result;
 #line 124
 
 #line 124
-  __nesc_result = AsyncSendAdapterP__AMSend__getPayload(arg_0x10ac63488, msg, len);
+  __nesc_result = AsyncSendAdapterP__AMSend__getPayload(arg_0x11157c488, msg, len);
 #line 124
 
 #line 124
@@ -10241,13 +10241,13 @@ static inline message_t *AsyncReceiveAdapterP__Receive__default__receive(am_id_t
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-inline static message_t * AsyncReceiveAdapterP__Receive__receive(am_id_t arg_0x10a43d020, message_t * msg, void * payload, uint8_t len){
+inline static message_t * AsyncReceiveAdapterP__Receive__receive(am_id_t arg_0x110d58020, message_t * msg, void * payload, uint8_t len){
 #line 67
   nx_struct message_t *__nesc_result;
 #line 67
 
 #line 67
-  switch (arg_0x10a43d020) {
+  switch (arg_0x110d58020) {
 #line 67
     case 5:
 #line 67
@@ -10259,7 +10259,7 @@ inline static message_t * AsyncReceiveAdapterP__Receive__receive(am_id_t arg_0x1
 #line 67
     default:
 #line 67
-      __nesc_result = AsyncReceiveAdapterP__Receive__default__receive(arg_0x10a43d020, msg, payload, len);
+      __nesc_result = AsyncReceiveAdapterP__Receive__default__receive(arg_0x110d58020, msg, payload, len);
 #line 67
       break;
 #line 67
@@ -10286,11 +10286,11 @@ inline static void PureTDMASchedulerP__SubReceive__updateBuffer(message_t * msg)
 #line 52
 }
 #line 52
-# 825 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 820 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__Receive__updateBuffer(message_t *msg)
-#line 825
+#line 820
 {
-#line 825
+#line 820
   return PureTDMASchedulerP__SubReceive__updateBuffer(msg);
 }
 
@@ -10349,9 +10349,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(am
 }
 
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static void AsyncSendAdapterP__AMSend__sendDone(am_id_t arg_0x10a43ec00, message_t * msg, error_t error){
+inline static void AsyncSendAdapterP__AMSend__sendDone(am_id_t arg_0x110d59c00, message_t * msg, error_t error){
 #line 99
-  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0x10a43ec00, msg, error);
+  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0x110d59c00, msg, error);
 #line 99
 }
 #line 99
@@ -10402,9 +10402,9 @@ static inline void TestNetworkC__CC2420Config__syncDone(error_t error)
     }
 }
 
-# 839 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 834 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__CC2420Config__syncDone(error_t error)
-#line 839
+#line 834
 {
 }
 
@@ -10499,13 +10499,13 @@ inline static error_t PureTDMASchedulerP__GenericSlotter__start(void ){
 #line 74
 }
 #line 74
-# 288 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 283 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__RadioPowerControl__startDone(error_t error)
-#line 288
+#line 283
 {
   int i;
 
-#line 290
+#line 285
   if (PureTDMASchedulerP__coordinatorId[sim_node()] == TOS_NODE_ID) {
       if (PureTDMASchedulerP__init[sim_node()] == FALSE) {
           PureTDMASchedulerP__SplitControl__startDone(error);
@@ -10515,7 +10515,7 @@ static inline void PureTDMASchedulerP__RadioPowerControl__startDone(error_t erro
         }
     }
   else 
-#line 297
+#line 292
     {
       if (PureTDMASchedulerP__init[sim_node()] == FALSE) {
           PureTDMASchedulerP__SplitControl__startDone(error);
@@ -10567,9 +10567,9 @@ inline static void PureTDMASchedulerP__SplitControl__stopDone(error_t error){
 #line 117
 }
 #line 117
-# 305 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 300 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline void PureTDMASchedulerP__RadioPowerControl__stopDone(error_t error)
-#line 305
+#line 300
 {
   if (PureTDMASchedulerP__requestStop[sim_node()]) {
 
@@ -10661,9 +10661,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__send
 }
 
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0x10ac64318, message_t * msg, error_t error){
+inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0x11157e318, message_t * msg, error_t error){
 #line 89
-  switch (arg_0x10ac64318) {
+  switch (arg_0x11157e318) {
 #line 89
     case 0U:
 #line 89
@@ -10673,7 +10673,7 @@ inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint
 #line 89
     default:
 #line 89
-      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0x10ac64318, msg, error);
+      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0x11157e318, msg, error);
 #line 89
       break;
 #line 89
@@ -10717,9 +10717,9 @@ static inline void SimSchedulerBasicP__TaskBasic__default__runTask(uint8_t id)
 }
 
 # 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x10a04b960){
+inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x110966960){
 #line 64
-  switch (arg_0x10a04b960) {
+  switch (arg_0x110966960) {
 #line 64
     case AsyncReceiveAdapterP__receiveDone_task:
 #line 64
@@ -10777,7 +10777,7 @@ inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x10a04b96
 #line 64
     default:
 #line 64
-      SimSchedulerBasicP__TaskBasic__default__runTask(arg_0x10a04b960);
+      SimSchedulerBasicP__TaskBasic__default__runTask(arg_0x110966960);
 #line 64
       break;
 #line 64
@@ -10800,33 +10800,33 @@ inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__errorTask__postT
 #line 56
 }
 #line 56
-# 489 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 484 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static inline error_t PureTDMASchedulerP__Send__send(message_t *msg, uint8_t len)
-#line 489
+#line 484
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 490
+#line 485
     {
       if (PureTDMASchedulerP__toSend[sim_node()] == (void *)0) {
           PureTDMASchedulerP__toSend[sim_node()] = msg;
           PureTDMASchedulerP__toSendLen[sim_node()] = len;
           {
             unsigned char __nesc_temp = 
-#line 494
+#line 489
             SUCCESS;
 
             {
-#line 494
+#line 489
               __nesc_atomic_end(__nesc_atomic); 
-#line 494
+#line 489
               return __nesc_temp;
             }
           }
         }
     }
-#line 498
+#line 493
     __nesc_atomic_end(__nesc_atomic); }
-#line 497
+#line 492
   return FAIL;
 }
 
@@ -10854,13 +10854,13 @@ static inline error_t AsyncSendAdapterP__AMSend__send(am_id_t id, am_addr_t addr
 }
 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0x10ac63488, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0x11157c488, am_addr_t addr, message_t * msg, uint8_t len){
 #line 69
   unsigned char __nesc_result;
 #line 69
 
 #line 69
-  __nesc_result = AsyncSendAdapterP__AMSend__send(arg_0x10ac63488, addr, msg, len);
+  __nesc_result = AsyncSendAdapterP__AMSend__send(arg_0x11157c488, addr, msg, len);
 #line 69
 
 #line 69
@@ -11642,13 +11642,8 @@ static inline error_t PureTDMASchedulerP__Init__init(void )
 
 
 
-
-
-
-
-
               if ((((((((
-#line 247
+#line 242
               TOS_NODE_ID == 1 || TOS_NODE_ID == 2) || TOS_NODE_ID == 3) || TOS_NODE_ID == 4) || TOS_NODE_ID == 5)
                || TOS_NODE_ID == 6) || TOS_NODE_ID == 7) || TOS_NODE_ID == 8) || TOS_NODE_ID == 9) {
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->self_data1.nxdata, TOS_NODE_ID * 10);
@@ -11660,7 +11655,7 @@ static inline error_t PureTDMASchedulerP__Init__init(void )
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->i_am_primary.nxdata, 1);
                 }
               else 
-#line 256
+#line 251
                 {
                   __nesc_hton_uint8(PureTDMASchedulerP__log_payload[sim_node()]->i_am_primary.nxdata, 0);
                 }
@@ -14380,9 +14375,9 @@ static /*Counter32khz16C.TransformCounterC*/TransformCounterC__0__to_size_type /
   return rv;
 }
 
-# 842 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 837 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static void PureTDMASchedulerP__readTopoFile(void )
-#line 842
+#line 837
 {
 
   char *line = (void *)0;
@@ -14397,7 +14392,7 @@ static void PureTDMASchedulerP__readTopoFile(void )
 
 
 
-  PureTDMASchedulerP__topo_fp[sim_node()] = fopen("/Users/wangwenchen/wcps_apps/FEWHOP_iterative_HX4/topology.txt", "r");
+  PureTDMASchedulerP__topo_fp[sim_node()] = fopen("/Users/wangwenchen/github/paper1_experiment/topology.txt", "r");
   if (PureTDMASchedulerP__topo_fp[sim_node()] == (void *)0) {
     exit(1);
     }
@@ -14434,7 +14429,7 @@ static void PureTDMASchedulerP__readTopoFile(void )
           PureTDMASchedulerP__CURRNODES[sim_node()] = counter;
         }
       else 
-#line 891
+#line 886
         {
           PureTDMASchedulerP__schedule_counter[sim_node()][line_counter - 1] = counter;
         }
@@ -14460,9 +14455,9 @@ static void PureTDMASchedulerP__readTopoFile(void )
     }
 }
 
-#line 1048
+#line 1043
 static void PureTDMASchedulerP__generateSchedule(void )
-#line 1048
+#line 1043
 {
   char *line = (void *)0;
   size_t len = 0;
@@ -14475,7 +14470,7 @@ static void PureTDMASchedulerP__generateSchedule(void )
   uint8_t counter = 0;
 
   uint8_t i;
-#line 1059
+#line 1054
   uint8_t j;
 
   uint8_t node_index = 0;
@@ -14484,7 +14479,7 @@ static void PureTDMASchedulerP__generateSchedule(void )
 
 
 
-  PureTDMASchedulerP__topo_fp[sim_node()] = fopen("/Users/wangwenchen/wcps_apps/FEWHOP_iterative_HX4/topology.txt", "r");
+  PureTDMASchedulerP__topo_fp[sim_node()] = fopen("/Users/wangwenchen/github/paper1_experiment/topology.txt", "r");
 
   if (PureTDMASchedulerP__topo_fp[sim_node()] == (void *)0) {
     exit(1);
@@ -14618,13 +14613,13 @@ static am_addr_t TossimActiveMessageC__AMPacket__source(message_t *amsg)
   return __nesc_ntoh_uint16(header->src.nxdata);
 }
 
-# 918 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 913 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static int PureTDMASchedulerP__find_delay(int node)
-#line 918
+#line 913
 {
   uint8_t i;
 
-#line 920
+#line 915
   for (i = 0; i < PureTDMASchedulerP__CURRNODES[sim_node()]; i++) {
       if (PureTDMASchedulerP__node_list[sim_node()][i] == node) {
           return i + 1;
@@ -14778,13 +14773,13 @@ static void TestNetworkC__RadioControl__startDone(error_t err)
     }
 }
 
-# 269 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
+# 264 "/opt/tinyos-2.x/apps/wustl/upma/lib/macs/fewhx4/PureTDMASchedulerP.nc"
 static error_t PureTDMASchedulerP__SplitControl__start(void )
-#line 269
+#line 264
 {
   error_t err;
 
-#line 271
+#line 266
   if (PureTDMASchedulerP__init[sim_node()] == FALSE) {
       PureTDMASchedulerP__FrameConfiguration__setSlotLength(PureTDMASchedulerP__slotSize[sim_node()]);
       PureTDMASchedulerP__FrameConfiguration__setFrameLength(PureTDMASchedulerP__bi[sim_node()] + 1);
